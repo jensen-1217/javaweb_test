@@ -1,0 +1,1 @@
+(()=>{var r={289:(r,o)=>{o.info=function(r){document.write(r)}},854:(r,o)=>{o.add=function(r,o){return r+o}}},o={};function n(t){var e=o[t];if(void 0!==e)return e.exports;var i=o[t]={exports:{}};return r[t](i,i.exports,n),i.exports}var t=n(289),e=n(854);t.info("Hello world!"+e.add(100,200))})();
