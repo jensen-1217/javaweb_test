@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用axios发送异步请求</title>
+</head>
+<body>
+<!--  不能在文本中书写js代码-->
+<script type="text/javascript" src="js/axios-0.18.0.js"></script>
+<script type="text/javascript">
+    //1.使用axios对象调用函数向后台服务器发送ajax异步请求
+    /*
+        整体： axios.get().then().catch().finally();
+          1）get()函数表示两后台服务器发送get请求，格式：
+              get(url?key=value&key=value...);===axios.get("/axiosDemo01Servlet?username=锁哥&password=1234")
+          2)then() 处理后台服务器响应的，格式：
+                then(function(接收响应数据的对象名){
+                    处理响应的代码
+                });
+
+                then(function (resp){
+                 console.log(resp);
+             })
+             后台响应数据：
+                resp={
+                        data: 'axios实现ajax异步get请求,username=锁哥',
+                        status: 200,
+                        statusText: '',
+                        headers: {…},
+                        config: {…},
+                    }
+
+                resp.data就可以获取 数据： axios实现ajax异步get请求,username=锁哥
+
+          3)catch() :处理异常
+                catch(function (error) {
+                    console.log(error);
+                })
+
+                let person ={
+                    username:"锁哥",
+                    age:18
+                }
+     */
+    axios.get("/axiosDemo01Servlet?username=锁哥&password=1234")
+         .then(function (resp) {
+
+          })
+        .catch(function (error) {
+
+         })
+        .finally(function () {
+
+         });
+</script>
+</body>
+</html>

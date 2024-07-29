@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script type="text/javascript">
+      /*
+          json介绍
+            1.定义格式 1：{key:value,key:value,...}
+            2.定义格式 2：
+                [{key:value,key:value,...},{key:value,key:value,...}，{key:value,key:value,...},...]
+            3.定义格式 3：
+                {key:value,key:[key:value,key1:value1,...],key:value,...}
+       */
+        let person={"username":"白岩","age":"23","address":"山西"};
+        console.log(person.username);
+        console.log(person.age);
+
+        let arr=[{"username":"白岩","age":"23","address":"山西"},{"username":"白岩2","age":"24","address":"山西2"},
+                    {"username":"白岩3","age":"25","address":"山西3"}];
+        console.log(arr[2].username);
+
+       // 假设 JSON 数据存储在一个变量中
+const jsonData = {
+    "key1": "value1",
+    "key2": {
+        "key3": "value3",
+        "key4": "value4"
+    },
+    "key5": [
+        {
+            "key6": "value6",
+            "key7": "value7"
+        },
+        {
+            "key8": "value8",
+            "key9": "value9"
+        }
+    ],
+    "key10": "value10"
+};
+
+// 访问顶层键值
+console.log(jsonData.key1); // 输出 "value1"
+console.log(jsonData.key2.key3); // 输出 "value3"
+console.log(jsonData.key5[0].key6); // 输出 "value6"
+console.log(jsonData.key5[1].key9); // 输出 "value9"
+
+// 访问嵌套对象和数组
+jsonData.key2.key3 = "new value"; // 修改值
+jsonData.key5.push({"key11": "value11"}); // 在数组中添加新对象
+console.log(jsonData.key2.key3); // 输出 "value3"
+console.log(jsonData.key5[2].key11); // 输出 "value11"
+
+  </script>
+</body>
+</html>

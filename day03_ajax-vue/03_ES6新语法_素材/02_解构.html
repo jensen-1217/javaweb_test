@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //目标：从json对象中取值
+    const people={username:'Rose',age:18}
+    //es5
+    //好处，直观；缺点：如果你要取多个值就代码多了一些
+    // var username=people.username
+    // var age = people.age
+    // console.log(username + ' --- ' + age)
+
+    //es6
+    const {username,age}=people;
+    console.log(username + "," + age)
+
+    //数组
+    const color = ['red', 'blue']
+    //es5
+    //  var first=color[0];
+    //  console.log(first)
+    //es6
+    const [first,second]=color
+    console.log(first)
+    console.log(second)
+</script>
+</html>

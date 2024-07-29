@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速入门升级</title>
+</head>
+<body>
+    <!-- 视图 -->
+    <div id="app">
+        <div>姓名：{{name}}</div>
+        <div>班级：{{classRoom}}</div>
+        <button onclick="hi()">打招呼</button>
+        <button onclick="update()">修改班级</button>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+  let ve=new Vue({
+    el:"#app",
+    /* data:{
+        name:"白岩",
+        classRoom:"厕所"
+    } */
+   data(){
+    return{
+        name:"白岩",
+        classRoom:"厕所"
+    }
+   },
+
+   methods:{
+    show:function(){
+        console.log("show....");
+    }
+   }
+  })
+
+  function update(){
+    ve.show();
+  }
+
+</script>
+</html>

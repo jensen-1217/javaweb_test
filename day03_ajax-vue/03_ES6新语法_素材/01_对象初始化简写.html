@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //es5
+    function people (username,age){
+        return {
+            username:username,
+            age:age
+        }
+    }
+
+    //打印
+    console.log(people('Rose',18));
+
+    //es6
+    function people2 (username,age){
+        return {
+            //如果key的名字和变量参数名一致，则可以简化写
+            username,
+            age
+        }
+    }
+    //打印
+    console.log(people2('Jack',88));
+</script>
+</html>

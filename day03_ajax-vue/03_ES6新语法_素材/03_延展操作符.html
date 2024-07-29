@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //目标：扩展对象的值
+    //原来的对象
+    const peopleOld={username:'Rose',age:18}
+    //需要重新生成一个对象，并基于之前的对象扩展
+    const peopleNew={...peopleOld,address:'上海'}
+    console.log(peopleOld)
+    console.log(peopleNew)
+
+    //原来的数组
+    const colorOld=['red', 'yellow']
+    //需要重新生成一个数组，并基于之前的数组扩展
+    const colorNew=[...colorOld,'blue']
+    console.log(colorOld)
+    console.log(colorNew)
+</script>
+</html>
