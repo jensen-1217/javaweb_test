@@ -1,0 +1,101 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+<!--  <servlet>标签配置浏览器奥访问的servlet类-->
+<!--  <servlet-class>该标签配置要访问的servlet类的全路径（包名.类名）。tomcat底层通过反射技术创建HelloWorldServlet类的对象
+Class class = Class.forName("com.jensen.servlet_01.HelloWorldServlet");
+HelloWorldServlet helloWorldServlet = clazz.newInstance();调用HelloWorldServlet的无参构造方法
+ <servlet-name>对应HelloWorldServlet类的别名
+-->
+  <servlet>
+    <servlet-name>HelloWorldServlet</servlet-name>
+    <servlet-class>com.jensen.servlet_01.HelloWorldServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LifeDemo01Servlet</servlet-name>
+    <servlet-class>com.jensen.servlet_02.LifeDemo01Servlet</servlet-class>
+    <load-on-startup>-1</load-on-startup>
+    <!--服务器启动创建Servlet类的对象，默认值是-1表示第一次访问创建对象，如果文本值大于等于0，表示tomcat启动创建对象
+        如果多个Servlet都配置了该标签，那么文本值越小创建Servlet的优先级越高
+    -->
+  </servlet>
+
+  <servlet>
+    <servlet-name>Demo02Servlet</servlet-name>
+    <servlet-class>com.jensen.servlet_02.Demo02Servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Demo03Servlet</servlet-name>
+    <servlet-class>com.jensen.servlet_02.Demo03Servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>PathDemo01Servlet</servlet-name>
+    <servlet-class>com.jensen.servlet_03.PathDemo01Servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>PathDemo02Servlet</servlet-name>
+    <servlet-class>com.jensen.servlet_03.PathDemo02Servlet</servlet-class>
+  </servlet>
+<!--============================================================================================-->
+
+  <!--<servlet-mapping>
+    <servlet-name>PathDemo02Servlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>-->
+
+  <servlet-mapping>
+    <servlet-name>PathDemo02Servlet</servlet-name>
+    <url-pattern>*.test</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PathDemo02Servlet</servlet-name>
+    <url-pattern>/user/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PathDemo01Servlet</servlet-name>
+    <url-pattern>/path02</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PathDemo01Servlet</servlet-name>
+    <url-pattern>/path01</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Demo03Servlet</servlet-name>
+    <url-pattern>/life03</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Demo02Servlet</servlet-name>
+    <url-pattern>/life02</url-pattern>
+  </servlet-mapping>
+
+<!-- <servlet-mapping>:表示配置的映射路径，映射到com.jensen.servlet.HelloWorldServlet
+ <servlet-name>HelloWorldServlet</servlet-name>别名，必须和上述 <servlet>的子标签中的<servlet-name>一样
+ <url-pattern>浏览器通过该标签的文本访问HelloWorldServlet类
+ -->
+  <servlet-mapping>
+    <servlet-name>HelloWorldServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>LifeDemo01Servlet</servlet-name>
+    <url-pattern>/life01</url-pattern>
+  </servlet-mapping>
+
+<!--  <display-name>Archetype Created Web Application</display-name>-->
+<!--  <welcome-file-list>-->
+<!--    <welcome-file>demo01.html</welcome-file>-->
+<!--  </welcome-file-list>-->
+</web-app>
