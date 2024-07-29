@@ -1,0 +1,58 @@
+<!-- 文档类型声明标签，告知浏览器这个页面采取html版本来显示页面 -->
+<!DOCTYPE html>
+<!-- 告诉浏览器这是一个英文网站，本页面采取英文显示，单也可以书写中文 -->
+<html lang="en">
+
+<head>
+    <!-- 必须书写，告知浏览器以UTF-8编码表编解码中文，如果不书写就会乱码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题标签 -->
+    <title>Title</title>
+</head>
+<body>
+<!--
+    onclick属于js中的单击事件，只要单击当前开灯的input按钮标签就会执行该事件，调用该事件的js函数on()
+-->
+<input type="button" onclick="on()" value="开灯">
+<img id="myImage" border="0" src="imgs/off.gif" style="text-align:center;">
+<input type="button" onclick="off()" value="关灯">
+
+
+<script>
+
+    function on(){
+        /*
+            1.document.getElementById('myImage') 根据标签<img id="myImage" border="0" src="imgs/off.gif" style="text-align:center;">
+            的id属性值获取img整体标签对象，
+
+            2.document.getElementById('myImage').src='imgs/on.gif'; 使用获取的img标签对象调用img标签的src属性并赋值为imgs/on.gif
+         */
+        document.getElementById('myImage').src='imgs/on.gif';
+    }
+
+    function off(){
+        document.getElementById('myImage').src='imgs/off.gif'
+    }
+
+    /*
+        需求：每隔一秒，灯泡切换一次状态
+        就是每个一秒更改一次<img id="myImage" border="0" src="imgs/off.gif" style="text-align:center;">标签的src属性值
+        这里我们只需要每个一秒调用上面的js中的on或者off函数即可
+     */
+    let i=0;
+    window.setInterval(function(){
+        if(i%2==0){
+            on();
+        }else{
+            off();
+        }
+        i++;
+    },1000);
+   
+
+</script>
+
+</body>
+</html>

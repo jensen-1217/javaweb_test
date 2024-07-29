@@ -1,0 +1,22 @@
+/*
+    id选择器格式：
+        #id属性值{
+            样式名:样式值;
+            样式名:样式值;
+            样式名:样式值;
+            .....
+        }
+*/
+
+div{
+    color: red;
+}
+
+#myDiv{
+    color: #000;
+    font-size: 20px;
+}
+
+#threeDiv{
+    color:green;
+}

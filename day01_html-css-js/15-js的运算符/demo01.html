@@ -1,0 +1,62 @@
+<!-- 文档类型声明标签，告知浏览器这个页面采取html版本来显示页面 -->
+<!DOCTYPE html>
+<!-- 告诉浏览器这是一个英文网站，本页面采取英文显示，单也可以书写中文 -->
+<html lang="en">
+
+<head>
+    <!-- 必须书写，告知浏览器以UTF-8编码表编解码中文，如果不书写就会乱码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题标签 -->
+    <title>title</title>
+</head>
+<body>
+  <script type="text/javascript">
+      /*
+         == 和 ===区别
+         1.==非严格比较，具有强制类型转换功能，如果两侧的数据类型不一致，转换一的类型，然后比较数值是否相等、
+         2.===严格比较，如果运算符两侧类型不一，比较类型，然后返回false，如果类型一致，比较数值
+       */
+      let i=10;
+      let j='10';
+      console.log(i==j);
+      console.log(i===j);
+    
+    if(0||true){
+      console.log("真的")
+    }else{
+      console.log("假的")
+    }
+
+    if(10 && 1.2){
+      console.log("真的")
+    }else{
+      console.log("假的")
+    }
+
+    if(10 && ''){
+      console.log("真的")
+    }else{
+      console.log("假的")
+    }
+    
+      /*
+        逻辑运算符：
+          && || !
+         在js中有6种假：
+         1）false
+         2）0
+         3）空字符  ' '或者""
+         4)NaN
+         5)null
+         6)undefind
+         TODO：在js中逻辑运算符可以针对任意类型进行运算
+       */
+
+
+
+     
+  </script>
+</body>
+</html>

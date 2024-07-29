@@ -1,0 +1,43 @@
+<!-- 文档类型声明标签，告知浏览器这个页面采取html版本来显示页面 -->
+<!DOCTYPE html>
+<!-- 告诉浏览器这是一个英文网站，本页面采取英文显示，单也可以书写中文 -->
+<html lang="en">
+
+<head>
+    <!-- 必须书写，告知浏览器以UTF-8编码表编解码中文，如果不书写就会乱码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题标签 -->
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*
+        自定义对象：
+          let 对象名称 = {
+    			属性名称1:属性值1,
+    			属性名称2:属性值2,
+    			...
+    			函数名称:function (形参列表){}
+    			...
+			  };
+     */
+    let person={
+      name:"baiyan",
+      address:"山西",
+      age:18,
+      eat:function(){
+        console.log("我是白岩的爸爸"+this.address);
+        console.log("我是白岩的爸爸"+person .address);
+      }
+    };
+    
+    console.log(person.name);
+    console.log(person.address);
+    console.log(person.age);
+    person.eat();
+
+</script>
+</body>
+</html>

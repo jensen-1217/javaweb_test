@@ -1,0 +1,66 @@
+<!-- 文档类型声明标签，告知浏览器这个页面采取html版本来显示页面 -->
+<!DOCTYPE html>
+<!-- 告诉浏览器这是一个英文网站，本页面采取英文显示，单也可以书写中文 -->
+<html lang="en">
+
+<head>
+    <!-- 必须书写，告知浏览器以UTF-8编码表编解码中文，如果不书写就会乱码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题标签 -->
+    <title>欢迎注册</title>
+    <link href="css/register.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="form-div">
+    <div class="reg-content">
+        <h1>欢迎注册</h1>
+        <span>已有帐号？</span> <a href="#">登录</a>
+    </div>
+    <form id="reg-form" action="#" method="get">
+
+        <table>
+
+            <tr>
+                <td>用户名</td>
+                <td class="inputs">
+<!--                    <input name="username" type="text" id="username" onblur="checkUsername()">-->
+                    <input name="username" type="text" id="username" onblur="checkUsername()">
+                    <br>
+                    <span id="username_err" class="err_msg" style="display: none">用户名不太受欢迎</span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>密码</td>
+                <td class="inputs">
+                    <input name="password" type="password" id="password" onblur="checkPassword()">
+                    <br>
+                    <span id="password_err" class="err_msg" style="display: none">密码格式有误</span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>手机号</td>
+                <td class="inputs"><input name="tel" type="text" id="tel" onblur="checkTel()">
+                    <br>
+                    <span id="tel_err" class="err_msg" style="display: none">手机号格式有误</span>
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="buttons">
+            <input value="注 册" type="submit" id="reg_btn">
+        </div>
+        <br class="clear">
+    </form>
+
+</div>
+<script src="../js/demo01.js"></script>
+</body>
+</html>

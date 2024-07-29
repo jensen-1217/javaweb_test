@@ -1,0 +1,36 @@
+<!-- 文档类型声明标签，告知浏览器这个页面采取html版本来显示页面 -->
+<!DOCTYPE html>
+<!-- 告诉浏览器这是一个英文网站，本页面采取英文显示，单也可以书写中文 -->
+<html lang="en">
+
+<head>
+    <!-- 必须书写，告知浏览器以UTF-8编码表编解码中文，如果不书写就会乱码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题标签 -->
+    <title>title</title>
+</head>
+
+<body>
+    <!--  <div style="border:5px solid red;background-color: aqua">div1</div>-->
+      <div style="border: 5px solid red;background-color: aqua;">div1</div>
+
+
+    <!--
+      css的属性：display,属性值如下：
+        none	此元素不会被显示。
+        block	此元素将显示为块级元素，此元素前后会带有换行符。将行内标签变为块级标签
+        inline	默认。此元素会被显示为内联元素，元素前后没有换行符。将块级标签变为行内标签
+    -->
+        <div>div2</div>
+        <div style="display: none;">div3</div>
+        <div style="display: block;">div4</div>
+        <div style="display: inline;">div5</div>
+        <div style="display: inline;">div6</div>
+        <div style="display: inline;">div7</div>
+        <span style="display: block;">haha</span>
+        <span>hehe</span>
+</body>
+
+</html>
