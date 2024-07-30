@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>PathDemo01Servlet</servlet-name>
+        <servlet-class>com.jensen.servlet.PathDemo01Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PathDemo01Servlet</servlet-name>
+        <url-pattern>/pathAbso</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PathDemo02Servlet</servlet-name>
+        <servlet-class>com.jensen.servlet.PathDemo02Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PathDemo02Servlet</servlet-name>
+        <url-pattern>/pathAbso2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PathDemo03Servlet</servlet-name>
+        <servlet-class>com.jensen.servlet.PathDemo03Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PathDemo03Servlet</servlet-name>
+        <url-pattern>/pathAbso3</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
