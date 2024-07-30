@@ -1,0 +1,6 @@
+create table dish (
+  id int primary key auto_increment,
+  name varchar(32) comment '菜品名称',
+  price double comment '菜品价格',
+  description varchar(200) comment '描述信息'
+);
