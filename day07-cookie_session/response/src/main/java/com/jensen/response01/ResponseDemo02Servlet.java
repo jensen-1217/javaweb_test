@@ -18,7 +18,7 @@ public class ResponseDemo02Servlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.创建字节输入流关联本地文件
-        FileInputStream fis = new FileInputStream("D:\\Document\\Downloads\\baidudisk\\04阶段-javaweb课件\\day07-会话技术\\03_资料\\JSP&EL&JSTL\\上课图片\\1.验证码.bmp");
+        FileInputStream fis = new FileInputStream("D:\\Document\\Downloads\\验证码.bmp");
         //2.用response调用方法获取关联浏览器的字节输出流对象
         ServletOutputStream os = response.getOutputStream();
         //3.将数据读到内存中
